@@ -6,10 +6,15 @@
     <title>Ultraplay web development task</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <script src='node_modules/angular/angular.js'></script>
+    <script src='app/ultra-app.module.js'></script>
+    <script src='app/ultra.service.js'></script>
+    <script src='app/matches-list.component.js'></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" ng-app="ultra-app">
         <h1>Ultraplay web development task</h1>
+
+        <matches-list></matches-list>
     </div>
 </body>
 </html>
