@@ -4,11 +4,7 @@
     angular
         .module('ultra-app')
         .component('matchesList', {
-            template:
-                '<li ng-repeat="match in $ctrl.matches">' +
-                    '<span>{{ match.$.Name }}</span>' +
-                    // '<pre>{{ match | json }}</pre>' +
-                '</li>',
+            templateUrl: './app/matches-list.html',
             controller: MatchesListController
         });
 
