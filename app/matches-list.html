@@ -1,5 +1,6 @@
+Sort by StartDate
 <table class="table">
-    <tbody ng-repeat="match in $ctrl.matches">
+    <tbody ng-repeat="match in $ctrl.matches | orderBy: 'StartDate'">
         <tr class="table-active">
             <td scope="col" colspan="2">{{ match.$.Name }}</td>
             <td scope="col">Market</td>
