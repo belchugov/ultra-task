@@ -1,3 +1,19 @@
-<li ng-repeat="match in $ctrl.matches">
-    <span>{{ match.$.Name }}</span>
-</li>
+<table class="table">
+    <tbody ng-repeat="match in $ctrl.matches">
+        <tr class="table-active">
+            <td scope="col" colspan="2">{{ match.$.Name }}</td>
+            <td scope="col">Market</td>
+            <td scope="col">1</td>
+            <td scope="col">x</td>
+            <td scope="col">2</td>
+        </tr>
+        <tr ng-repeat="singleMatch in match.Match">
+            <td>{{ singleMatch.$.StartDate | date:'dd MMM HH:mm' }}</td>
+            <td>{{ singleMatch.$.Name }}</td>
+            <td>{{ singleMatch.Bet[0].$.Name }}</td>
+            <td>{{ singleMatch.Bet[0].Odd[0].$.Value }}</td>
+            <td></td>
+            <td>{{ singleMatch.Bet[0].Odd[1].$.Value }}</td>
+        </tr>
+    </tbody>
+</table>
